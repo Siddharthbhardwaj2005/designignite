@@ -1,0 +1,151 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"         integrity="sha512-W7MPp6xf+n2gXubxvfut4XaM9Nc5RTr4/rNY1f7mzhgjZaiDPQaXcExq2v+TZ4dDUJuI24P3eIvDc58S/mvoig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        /* Custom CSS styles */
+        .container {
+            text-align: center; /* Center-align the content */
+        
+        }
+
+        .form-container {
+            max-width: 500px; /* Set maximum width for the form */
+            margin: 0 auto; /* Center the form horizontally */
+            background-color: #f8f9fa; /* Background color */
+            padding: 30px; /* Padding around the form */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+        }
+
+        .form-label {
+            font-weight: bold; /* Bold font weight for labels */
+        }
+
+        .form-control {
+            border-radius: 5px; /* Rounded corners for input fields */
+        }
+
+        .btn-primary {
+            width: 100%; /* Make the button full width */
+        }
+
+        /* New styles for the contact section */
+        .contact-section {
+            background-color: #A21C20; /* Background color */
+            color: white; /* Text color */
+            padding: 50px 0; /* Padding for spacing */
+        }
+         /* Styles for FAQ section */
+         .faq-section {
+            padding: 50px 0; /* Padding for spacing */
+        }
+        
+        .faq-item {
+            margin-bottom: 20px; /* Bottom margin between FAQ items */
+            text-align: left; /* Left-align FAQ items */
+            cursor: pointer; /* Change cursor to pointer when hovering over FAQ items */
+            transition: color 0.3s; /* Smooth transition for color change */
+        }
+        
+        .faq-item:hover {
+            color: #FFA500; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    {% include "app1/navbar.html" %}
+    <br><br>
+    <div class="container">
+        <div class="form-container">
+            <img src="{% static 'app1/getin.jpg' %}" class="img-fluid mb-4" alt="Get in Touch">
+            <h1 class="mb-4">Contact Us</h1>
+            <form method="POST" action="/contact" class="mb-4">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Describe Your Issue</label>
+                    <textarea class="form-control" name="content" id="content" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="contact-section">
+        <div class="container">
+                    <h2>Address</h2>
+                    <p>Sector - 43, Manav Rachna International Institute of Research and Studies</p>
+                    <p>Aravli Hills, Faridabad, 121003</p>
+                
+                    <!-- Add your map API integration here -->
+                    <!-- Example: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890..."></iframe> -->
+                </div>
+            </div>
+        <section> 
+    <div class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed faq-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    What is Design Ignite 2024?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                DESIGN IGNITE 2024 is annual design festival of Manav Rachna celebrated every year by School Of Design.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed faq-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Where to Register?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                 Register Button is giving under every Event
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed faq-item" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What is Registeration Fee?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                 Registeration Fee varies from event to event. 
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'app1/footer.html' %}
+</body>
+</html>

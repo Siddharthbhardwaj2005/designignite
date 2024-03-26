@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repurpose</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+    .custom-navbar {
+        background-color: #000000 !important;
+    }
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding-top: 100px;
+            background: #a21c20;
+            color: white; /* Set text color to white */
+        }
+
+        .curve {
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .curve {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            transform: translate(85%, 60%);
+        }
+
+        /* Style for the rules section */
+        .rules-container {
+            text-align: center; /* Align content in the center */
+            padding: 50px; /* Add padding */
+        }
+
+        .rules-container h2 {
+            margin-bottom: 20px; /* Add margin below heading */
+        }
+
+        .rules-container p {
+            margin-bottom: 10px; /* Add margin below each paragraph */
+            text-align: justify; /* Align text justified */
+        }
+    </style>
+</head>
+<body>
+    {% include "app1/navbar.html" with navbar_class="custom-navbar" %}
+    <br>
+   
+    <section class = "justify-content-center">
+        
+        <!-- content here -->
+        <div class="curve"></div>
+        <div class="container text-center">
+            <h1><span style = "font-weight:bold"> Sun-Kissed: </span>Summer college fashion 2024 </h1>
+        </div>
+        <div class = "container justify-content-center">
+        <img src="{% static 'app1/fashion.png' %}" class="img-fluid rounded mx-auto d-block" alt="...">
+        {% comment %} <img src="{% static 'app1/animation_card_1.png' %}" class="img-fluid" style="max-width: 80%; height: auto"> {% endcomment %}
+        </div>
+    </section>
+    <section style="background-color: white;">
+        <div class="container text-center rules-container" style= "color:black">
+            <h2>Registration Fee: Rs. 2000 (per team)</h2>
+            <h3>Date: 19 April 2024 </h3>
+            <h3>Time: 1:00 p.m. to 3:00 p.m.</h3>
+            <h3>Venue: A Block Auditorium, MRIIRS</h3>
+        </div>
+        <div class="container" style="color:black; ">
+            
+            <h2 style = "text-start">About the event</h2>
+            <p style = "text-start">Summer Fashion Showcase’ Calling all design students to Join ‘Sun-Kissed’ a fashion Show cum competition where you'll strut your stuff with trendy and practical college wear. Show off your skills, embrace college culture, and push the limits of collegiate fashion with your unique designs.
+            </p> <p>Step into the spotlight and compete in our Fashion Show Competition focused on Summer College Fashion. Show off your creativity and trendsetting expertise by crafting designs that capture the essence of campus life in the extreme heat of summer. From breezy ensembles to innovative accessories, contestants will compete for the title with their interpretation of the hottest seasonal trends. Embrace sustainability, inclusivity, and innovation as you showcase your unique take on collegiate style. Join us for an electrifying showdown where the boldest and most inventive designs reign supreme.
+            </p>
+            <p>This competition provides a platform for aspiring designers to demonstrate their creativity, craftsmanship, and understanding of current fashion trends while celebrating the vibrant spirit of college life. Through "College Chic," we aim to inspire students to explore innovative design concepts, experiment with textiles, clothing and redefine the boundaries of collegiate fashion.
+            </p>
+            
+            <h3>Competition Guidelines:. </h3>
+               <p style="font-size: 20px"> <span style = "font-weight:bold"> Eligibility:</span> The competition is open to students currently enrolled in any domains of Higher education Institutions - University or Institutions / design schools / fashion-related programs at the undergraduate or graduate level.</p>
+               <p style="font-size: 20px"> The theme of "College Chic" revolves around Spring/Summer college wear, encompassing casual, comfortable, and stylish attire suitable for everyday campus life. The collections May be as any / all  of the following </p>
+               <ul> 
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Casual outfits suitable for daytime activities such as classes, studying, or hanging out with friends.</p> </li>
+               <li> <p style="font-weight: bold; font-size: 20px text-start">Dressier attire suitable for special events, presentations, or social gatherings on campus.</p> </li>
+               <li> <p style="font-weight: bold; font-size: 20px text-start">Sporty and functional outfits suitable for workouts, sports activities, or athleisure.</p> </li>
+               <li> <p style="font-weight: bold; font-size: 20px text-start">Innovative and avant-garde designs that push the boundaries of traditional college wear.</p> </li>
+           </ul>
+            </div>
+        <div class="container" style="color:black;">
+            <h2>Design Criteria: </h2>
+            <p style="font-weight: bold; font-size: 20px text-start">Participants will showcase 4 designs in the collection  Entries will be evaluated based on creativity, wearability, coherence with the theme, craftsmanship, and overall presentation. </p>
+           
+               <h2>Judging Process:</h2>
+               <h4>A panel of industry professionals, fashion designers, and faculty members will evaluate the entries based on the judging criteria.</h4>
+                <ul> 
+                 <li> <p style="font-weight: bold; font-size: 20px text-start">Creativity and Originality</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Relevance to the theme</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Wearability for summer</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Innovation in design</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Presentation skill on the ramp</p> </li>
+            </ul>
+            <h2>Fashion Show:</h2>
+           
+             <ul> 
+              <li> <p style="font-weight: bold; font-size: 20px text-start">The design entries  will be featured in a live fashion show event, where participants along with their models will have the opportunity to showcase their creations on the runway in front of a live audience. </p> </li> </ul>
+              <h2>Model Selection:</h2>
+              <ul>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Participants can choose their models from fellow students or friends and family</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Encourage diversity in model selection to represent a wide range of styles and body types.</p> </li>
+            </ul>
+            <h2>Accessories and Beauty Standards:</h2>
+            <ul>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Emphasize the importance of accessories that complement the summer theme.</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Use vibrant, summer-inspired makeup and hairstyles</p> </li>
+            </ul>
+            <h2>Music and Atmosphere:</h2>
+            <ul>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Choose upbeat and summer-themed music to enhance the atmosphere..</p> </li>
+            </ul>
+            <h2>Strict Guidelines:</h2>
+            <ul>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">All the teams will get 5-10 minutes to showcase their collection. So they have to prepare their ramp walk accordingly..</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Music system will be provided by us but students will get their own playlist in pendrives according to their theme and preparation.</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Students will be getting their own models, makeup, accessories and costumes.</p> </li>
+            </ul>
+
+              <h2>Prizes:</h2>
+             
+           
+             <ul> 
+              <li> <p style="font-weight: bold; font-size: 20px text-start">1st Prize Rs. 30000/-   + certificates </p> </li>
+             <li> <p style="font-weight: bold; font-size: 20px text-start">2nd Prize: Rs. 15000/-  + certificates</p> </li>
+         </ul>
+        
+    
+     
+            <a href="/" class="btn btn-info text-center">Register Here</a> <!-- Changed button to anchor tag -->
+        </div>
+    </section>
+    
+    <div class="alert alert-primary text-center" role="alert">
+        <p style = "font-weight: bold; font-size: 20px"> Faculty Coordinator: Ms. Ankita Narula, Contact:  8728000883  </p>
+        <p style = "font-weight: bold; font-size: 20px"> Student Coordinator: Shivansh, Contact: 9871190971</p>
+      </div>
+    
+
+    {% include 'app1/footer.html' %}
+
+</body>
+</html>

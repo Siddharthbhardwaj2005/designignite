@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Exhibition</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+    .custom-navbar {
+        background-color: #000000 !important;
+    }
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding-top: 100px;
+            background: #a21c20;
+            color: white; /* Set text color to white */
+        }
+
+        .curve {
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .curve {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            transform: translate(85%, 60%);
+        }
+
+        /* Style for the rules section */
+        .rules-container {
+            text-align: center; /* Align content in the center */
+            padding: 50px; /* Add padding */
+        }
+
+        .rules-container h2 {
+            margin-bottom: 20px; /* Add margin below heading */
+        }
+
+        .rules-container p {
+            margin-bottom: 10px; /* Add margin below each paragraph */
+            text-align: justify; /* Align text justified */
+        }
+    </style>
+</head>
+<body>
+    {% include "app1/navbar.html" with navbar_class="custom-navbar" %}
+    <br>
+   
+    <section class = "justify-content-center">
+        
+      
+        <!-- content here -->
+        <div class="curve"></div>
+        <div class="container text-center">
+            <h1>Student Work’s Exhibition</h1>
+        </div>
+        <img src="{% static 'app1/studentexhibition.png' %}" class="img-fluid rounded mx-auto d-block" alt="...">
+       
+        <div class="container text-center rules-container" style= "color:white">
+            
+            <h3>Date: 18th - 19th April 2024 </h3>
+            <h3>Time: 8:00 a.m. to 4:00 p.m.</h3>
+            <h3>Venue: E-Block - Ground floor entrance, First floor corridor, Second floor corridor</h3>
+        </div>
+         </section>
+    <section style="background-color: white;">
+        <div class="container" style="color:black; ">
+            <h2 style = "text-start">About the event</h2>
+            <p style = "text-start"> Design Ignite celebrates creativity and innovation in design by showcasing student’s work, which highlights the talent and potential of young designers in making.</p> 
+            <p style = "text-start"> Sheets, models, art work, digital work, competition entries all are displayed to convey the quality of education provided by the institutes. Work will be displayed covering the  verticals of  Interior design, Communication design, Animation and VFX design.  </p>
+            
+ 
+            
+            <a href="/" class="btn btn-info text-center">Register Here</a> <!-- Changed button to anchor tag -->
+            </div>
+    
+     
+        </div>
+    </section>
+    
+    <div class="alert alert-primary text-center" role="alert">
+        <p style = "font-weight: bold; font-size: 20px"> Faculty Coordinator: Ms. Abha Maheshwari, Contact:  9818682330  </p>
+        <p style = "font-weight: bold; font-size: 20px"> Student Coordinator: Ayaan, Contact: 9560392165</p>
+      </div>
+    
+
+    {% include 'app1/footer.html' %}
+
+</body>
+</html>

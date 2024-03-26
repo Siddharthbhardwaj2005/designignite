@@ -1,0 +1,137 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Workshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f7f7f7; /* Set background color */
+        }
+
+        .card {
+            background-color: #A21C20; /* Set card background color */
+            color: white; /* Set text color */
+            border-radius: 10px; /* Add border radius */
+        }
+        .card-body {
+            padding: 20px; /* Add padding */
+        }
+        .card-title {
+            margin-bottom: 10px; /* Add margin to title */
+        }
+        .card-text {
+            margin-bottom: 20px; /* Add margin to text */
+        }
+        .btn {
+            background-color: white; /* Set button background color */
+            color: #A21C20; /* Set button text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+            padding: 10px 20px; /* Add padding */
+            transition: background-color 0.3s ease; /* Add transition */
+        }
+        .btn:hover {
+            background-color: #f0f0f0; /* Change button background color on hover */
+            color: #A21C20; /* Change button text color on hover */
+        }
+        .card-img {
+            width: 100%;
+            border-radius: 10px 10px 0 0; /* Rounded corners for top */
+        }
+        .custom-navbar {
+            background-color: #000000 !important;
+        }
+    </style>
+</head>
+<body>
+    {% include "app1/navbar.html" with navbar_class="custom-navbar" %}
+    <div class="container text-center">
+        <br> <br> <br>
+        <h1>Student Exhibition</h1>
+        <h3>Events under Student Exhibition</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+                <div class="card" style = "background-color:#A21C20; color:white">
+                    <img src="{% static 'app1/studentexhibition.png' %}" class="card-img" alt="Event 2" style = "height: 285px">
+                      <div class="card-body">
+                        <h5 class="card-title">Student Exhibition</h5>
+                        <p class="card-text">Design Ignite celebrates creativity and innovation in design by showcasing student’s work, which highlights the talent and potential of young designers in making.  </p>
+                        
+                        <a href="studentexhibition" class="btn btn-primary">Learn More</a> <!-- Button added -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card" style = "background-color:#A21C20; color:white">
+                    <img src="{% static 'app1/handicraft.png' %}" class="card-img" alt="Event 2" style = "height: 335px">
+                    <div class="card-body">
+                        <h5 class="card-title">Handicraft Exhibtion</h5>
+                        <p class="card-text">This exhibition aims to celebrate the rich diversity and craftsmanship of local artisans from various regions across India. </p>
+                        
+                        <a href="handicraft" class="btn btn-primary">Learn More</a> <!-- Button added -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br> 
+        <h1>Design Workshop</h1>
+        <h3>Events under Design Workshop</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+                <div class="card" style = "background-color:#A21C20; color:white">
+                    <img src="{% static 'app1/pottery.png' %}" class="card-img" alt="Event 2" style = "height: 308px">
+                      <div class="card-body">
+                        <h5 class="card-title">Clay Creation: Pottery Workshop</h5>
+                        <p class="card-text">. This workshop offers a unique opportunity for participants to engage directly with local artisans and explore pottery-making. </p>
+                        
+                        <a href="claycreation" class="btn btn-primary">Learn More</a> <!-- Button added -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card" style = "background-color:#A21C20; color:white">
+                    <img src="{% static 'app1/tiendye.png' %}" class="card-img" alt="Event 2" style = "height: 285px">  
+                    <div class="card-body">
+                        <h5 class="card-title">Colors of Tradition</h5>
+                        <p class="card-text">This workshop offers participants the opportunity to learn from local artisans and explore the traditional techniques of tie and dye. </p>
+                        
+                        <a href="tieanddye" class="btn btn-primary">Learn More</a> <!-- Button added -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+                <div class="card" style = "background-color:#A21C20; color:white">
+                    <img src="{% static 'app1/nest.png' %}" class="card-img" alt="Event 2" style = "height: 285px">   
+                      <div class="card-body">
+                        <h5 class="card-title">Eco Nests:</h5>
+                        <p class="card-text">This workshop aims to showcase the ingenuity of artisans in repurposing waste materials to create eco-friendly bird nests. </p>
+                        
+                        <a href="birdnest" class="btn btn-primary">Learn More</a> <!-- Button added -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card" style = "background-color:#A21C20; color:white">
+                    <img src="{% static 'app1/coaster.png' %}" class="card-img" alt="Event 1" style = "height: 285px">
+                    <div class="card-body" >
+                        <h5 class="card-title">DIY Workshop: Coaster Making</h5>
+                        <p class="card-text">This workshop is designed to foster creativity, experimentation, and practical skills among participants. 
+                            </p>
+                        <a href="coaster" class="btn btn-primary">Learn More</a> <!-- Button added -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'app1/footer.html' %}
+</body>
+</html>

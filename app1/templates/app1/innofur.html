@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repurpose</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+    .custom-navbar {
+        background-color: #000000 !important;
+    }
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding-top: 100px;
+            background: #a21c20;
+            color: white; /* Set text color to white */
+        }
+
+        .curve {
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .curve {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            transform: translate(85%, 60%);
+        }
+
+        /* Style for the rules section */
+        .rules-container {
+            text-align: center; /* Align content in the center */
+            padding: 50px; /* Add padding */
+        }
+
+        .rules-container h2 {
+            margin-bottom: 20px; /* Add margin below heading */
+        }
+
+        .rules-container p {
+            margin-bottom: 10px; /* Add margin below each paragraph */
+            text-align: justify; /* Align text justified */
+        }
+    </style>
+</head>
+<body>
+    {% include "app1/navbar.html" with navbar_class="custom-navbar" %}
+    <br>
+   
+    <section class = "justify-content-center">
+        <div class = "container justify-content-center">
+            <img src="{% static 'app1/innofur_1.png' %}" class="img-fluid rounded mx-auto d-block" alt="...">
+            {% comment %} <img src="{% static 'app1/animation_card_1.png' %}" class="img-fluid" style="max-width: 80%; height: auto"> {% endcomment %}
+            </div>
+      
+        <!-- content here -->
+        <div class="curve"></div>
+        <div class="container text-center">
+            <h1>InnoFUR: Furniture design competition</h1>
+        </div>
+        <div class = "container justify-content-center">
+        <img src="{% static 'app1/innofur2.png' %}" class="img-fluid rounded mx-auto d-block" alt="...">
+        {% comment %} <img src="{% static 'app1/animation_card_1.png' %}" class="img-fluid" style="max-width: 80%; height: auto"> {% endcomment %}
+        </div>
+    </section>
+    <section style="background-color: white;">
+        <div class="container text-center rules-container" style= "color:black">
+            <h2>Registration Fee: Rs. 500/- per person</h2>
+            <h5>(Max 4 person in a team)</h5>
+            <br>
+            <h3>Date: 18 April 2024 </h3>
+            <h3>Time: 10:00 a.m. to 2:00 p.m. (4hrs Non-stop)</h3>
+            <h3>Venue: E Block, ES 03, MRIIRS</h3>
+        </div>
+        <div class="container" style="color:black; ">
+            <h2 style = "text-start">About the event</h2>
+            <p style = "text-start">InnoFUR is a furniture design competition aimed to celebrate the fusion of artistry and functionality of furniture design. In today’s dynamic world, furniture design has evolved beyond mere functionality to become a symbol of innovation, creativity and sustainability. </p> 
+                <p style = "text-start"> Competition offers participants a chance to apply their skills in a competitive yet supportive environment. This competition aims to provide a platform for designers to showcase their talents, push the boundaries of conventional design, and contribute to the evolution of the furniture industry. Participants can showcase their talent and creativity to a wider audience, including potential employers and industry professionals. </p>
+
+                <h4> The competition is open to HEI / Design students in a team upto 4  participants. Each team needs to register themselves with details of all participants. </h4>
+                
+                
+                <h5>Submission of Conceptual design Participants needs to be done prior to the event. Teams will make the prototype on the day of competition on 11th April 2024 at the competition Venue.  Design process / pictorial presentation of the creation is part of submission. All the pictures at various stages should be clicked & presented along with the submission.</h5>
+                <h3 style = "font-style:italic"> Participants will get their own material to make a prototype of selected concepts</h3>
+            </div>
+        <div class="container" style="color:black;">
+            <h2>Specifications:</h2>
+            <p style="font-weight: bold; font-size: 20px text-start">1. Display the final Prototype at the end of competition..</p>
+            <p style="font-weight: bold; font-size: 20px text-start">2.	 Concept and design must be original. Initial concept must reach us within a given time frame.</p>
+            <p style="font-weight: bold; font-size: 20px text-start">3.	The submission will be in the form of a prototype  with the display of the various stages in picture presentation.</p>
+           
+               <h2>Judging Criteria:</h2>
+               <h4>Points Distribution Criteria (Total 100 points)</h4>
+                <ul> 
+                 <li> <p style="font-weight: bold; font-size: 20px text-start">Concept - 30 points</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Innovation & creativity - 30 points</p> </li>
+                <li> <p style="font-weight: bold; font-size: 20px text-start">Final Product - 40 points</p> </li>
+            </ul>
+
+
+            <h2>Rules and Regulations:</h2>
+            <h4> 1.	Concept Submission stage </h4>
+             <ul> 
+              <li> <p style="font-weight: bold; font-size: 20px text-start"> Align the concept with the theme given. </p> </li>
+             <li> <p style="font-weight: bold; font-size: 20px text-start">Concept should be original, fulfilling all the criteria of multifunctionality.</p> </li>
+             <li> <p style="font-weight: bold; font-size: 20px text-start">Concept should reflect a simplistic and smart approach for form exploration.</p> </li>
+             <li> <p style="font-weight: bold; font-size: 20px text-start">Must fulfill the feasibility criteria to withstand climate in Indian Context.</p> </li>
+             <li> <p style="font-weight: bold; font-size: 20px text-start">Once a concept is accepted, participants will work for a more refined design.</p> </li>
+             <li> <p style="font-weight: bold; font-size: 20px text-start">Concepts must reach us in the first week of April 2024.
+             </p> </li>
+         </ul>
+         <h4> 2.	Prototype stage </h4>
+         <ul> 
+          <li> <p style="font-weight: bold; font-size: 20px text-start"> Must be done at the venue in a given time frame.  </p> </li>
+         <li> <p style="font-weight: bold; font-size: 20px text-start"> Submission must be accompanied by a visual journey from concept development to prototype.</p> </li>
+         <li> <p style="font-weight: bold; font-size: 20px text-start">Wherever required technical details and specifications must be given.</p> </li>
+     </ul>
+
+
+   
+
+        <h2>Jury/Dignitaries</h2>
+              <p style="font-weight: bold; font-size: 20px text-start">A panel of designers and sustainability advocates will evaluate the entries based on the judging criteria.</p> 
+
+    
+              <h2>Prizes:</h2>
+              <h5>Prizes will be awarded to the winners of each category, including cash prizes & Certificates. </h5>
+           
+             <ul> 
+              <li> <p style="font-weight: bold; font-size: 20px text-start">1st Prize Rs. 15,000/-   + certificates </p> </li>
+             <li> <p style="font-weight: bold; font-size: 20px text-start">2nd Prize: Rs. 10,000/-  + certificates</p> </li>
+         </ul>
+         <h4> All entries and prototypes will be exhibited to raise awareness about sustainability in furniture design. </h4>
+    
+     
+            <a href="/" class="btn btn-info text-center">Register Here</a> <!-- Changed button to anchor tag -->
+        </div>
+    </section>
+    
+    <div class="alert alert-primary text-center" role="alert">
+        <p style = "font-weight: bold; font-size: 20px"> Faculty Coordinator: Ms. Abha Maheshwari, Contact:  9818682330  </p>
+        <p style = "font-weight: bold; font-size: 20px"> Student Coordinator: Ayaan, Contact: 9560392165</p>
+      </div>
+    
+
+    {% include 'app1/footer.html' %}
+
+</body>
+</html>
